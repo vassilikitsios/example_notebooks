@@ -1,0 +1,18 @@
+((*- extends 'article.tplx' -*))
+
+((* block input_group *))
+    ((*- if cell.metadata.get('nbconvert', {}).get('show_code', False) -*))
+        ((( super() )))
+    ((*- endif -*))
+((* endblock input_group *))
+
+% Author and Title from metadata
+((* block maketitle *))
+\author{Vassili Kitsios}
+\affiliation{CSIRO Oceans and Atmosphere, Hobart 3700, AUSTRALIA}
+\title{Example notebook}
+\date{\today}
+\maketitle
+((* endblock maketitle *))
+
+
